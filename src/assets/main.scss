@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('../assets/css/reset.css');
+
+@import '../assets/scss/vars.scss' ;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  background: #F1F1F1;
+
+}
+
+.container {
+  max-width: 1792px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
