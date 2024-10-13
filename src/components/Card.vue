@@ -35,7 +35,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color: $darker-grey;
+        color: $black;
         margin-bottom: 16px;
         overflow: hidden;
         display: -webkit-box;

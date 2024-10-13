@@ -19,6 +19,7 @@
   import {ref, defineProps, onMounted, watch} from 'vue';
   import { useSitesStore } from '../store/sites/useSitesStore';
   import Storage from '../utils/storage'
+  import ISite from '../types/Sites'
 
   const props = defineProps<{subscribed: boolean, id: number}>()
   const store = useSitesStore();
@@ -28,8 +29,10 @@
     toggleSubscribe(props.id, (e.target as HTMLInputElement).checked)
   }
 
-  watch(()=> store.sites ,(sites) => {
-    Storage.setItem("sites", sites)
+  watch(()=> store.sites ,(newSubscribe, oldSubscribe) => {
+    Storage.setItem("sites", newSubscribe)
+    console.log("New Subscribes:", JSON.parse(JSON.stringify(newSubscribe)).map(el =>({site:el.site, subscribed: el.subscribed})))
+    console.log("Old Subscribes:", JSON.parse(JSON.stringify(oldSubscribe)).map(el =>({site:el.site, subscribed: el.subscribed})))
   }, { deep: true })
 
 </script>
