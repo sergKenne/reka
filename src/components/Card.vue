@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-  import CheckboxBtn from '../components/CheckboxBtn.vue'
+  import CheckboxBtn from '@/components/CheckboxBtn.vue'
   import ISite from '../types/Sites'
 
   const props = defineProps<{site: ISite}>()
@@ -21,7 +21,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/scss/vars.scss';
   .card {
     padding: 24px;
     background: $white;

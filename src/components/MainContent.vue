@@ -14,7 +14,7 @@
 <script setup lang="ts">
   import { storeToRefs } from 'pinia'
   import {computed, defineProps} from 'vue'
-  import { useSitesStore } from '../store/sites/useSitesStore'
+  import { useSitesStore } from '@/store/sites/useSitesStore'
   import Card from './Card.vue'
 
   const props = defineProps<{openModal: ()=>void}>()
@@ -29,7 +29,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/scss/vars.scss';
   .main {
     &__content-header {
       display: flex;

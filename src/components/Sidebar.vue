@@ -21,12 +21,11 @@
 
 <script setup lang="ts">
   import ProgressBar from './ProgressBar.vue';
-  import logo from '../assets/images/logo.svg'
+  import logo from '@/assets/images/logo.svg'
 
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/vars.scss';
   .sidebar {
     &__logo {
       display: block;

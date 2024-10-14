@@ -1,0 +1,30 @@
+[
+  {
+    "site": "Test your world geography skills",
+    "subscribed": true
+  },
+  {
+    "site": "Test your knowledge with our fun and challenging quiz game! Compete, learn, and improve with a wide range of topics.",
+    "subscribed": true
+  },
+  {
+    "site": "Guess the song from short clips",
+    "subscribed": false
+  },
+  {
+    "site": "Identify films from iconic scenes",
+    "subscribed": true
+  },
+  {
+    "site": "Challenge your historical knowledge",
+    "subscribed": false
+  },
+  {
+    "site": "Answer questions on various sports",
+    "subscribed": false
+  },
+  {
+    "site": "Prove your science smarts",
+    "subscribed": false
+  }
+]

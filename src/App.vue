@@ -17,10 +17,13 @@
 </template>
 
 <script setup lang="ts">
-  import {computed, ref, watch} from 'vue';
+  import {computed, onMounted, ref, watch} from 'vue';
   import Sidebar from './components/Sidebar.vue';
   import MainContent from './components/MainContent.vue';
   import Modal from './components/Modal.vue';
+import { useSitesStore } from './store/sites/useSitesStore';
+
+  const store = useSitesStore()
   
   const isModal = ref<boolean>(false)
 
@@ -31,10 +34,13 @@
     isModal.value = true
   }
 
+  onMounted(()=>{
+    store.fetchData()
+  })
+
 </script>
 
 <style lang="scss" scoped>
-  @import './assets/scss/vars.scss';
   .wrapper {
     padding-bottom: 80px;
   }

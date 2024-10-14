@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-  import check from '../assets/icons/check.svg';
+  import check from '@/assets/icons/check.svg';
   import {ref, defineProps, onMounted, watch} from 'vue';
   import { useSitesStore } from '../store/sites/useSitesStore';
   import Storage from '../utils/storage'
@@ -31,14 +31,13 @@
 
   watch(()=> store.sites ,(newSubscribe, oldSubscribe) => {
     Storage.setItem("sites", newSubscribe)
-    console.log("New Subscribes:", JSON.parse(JSON.stringify(newSubscribe)).map(el =>({site:el.site, subscribed: el.subscribed})))
-    console.log("Old Subscribes:", JSON.parse(JSON.stringify(oldSubscribe)).map(el =>({site:el.site, subscribed: el.subscribed})))
+    // console.log("New Subscribes:", JSON.parse(JSON.stringify(newSubscribe)).map(el =>({site:el.site, subscribed: el.subscribed})))
+    // console.log("Old Subscribes:", JSON.parse(JSON.stringify(oldSubscribe)).map(el =>({site:el.site, subscribed: el.subscribed})))
   }, { deep: true })
 
 </script>
 
 <style  lang="scss" scoped>
-  @import '../assets/scss/vars.scss';
   .checkbox {
     &__label {
       display: inline-flex;

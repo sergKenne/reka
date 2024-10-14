@@ -7,6 +7,13 @@ import createSvgSpritePlugin from 'vite-plugin-svg-sprite';
 
 // https://vite.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/scss/vars.scss";`,
+      },
+    },
+  },
   plugins: [
     vue(),
     createSvgSpritePlugin({

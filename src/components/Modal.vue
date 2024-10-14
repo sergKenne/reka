@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
   import {defineProps, onMounted} from 'vue'
-  import close from '../assets/icons/close.svg'
+  import close from '@/assets/icons/close.svg'
   import { useSitesStore } from '../store/sites/useSitesStore'
 
   const props = defineProps<{closeModal: ()=>void, }>()
@@ -39,7 +39,6 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '../assets/scss/vars.scss';
   .modal {
     position: fixed;
     left: 0;

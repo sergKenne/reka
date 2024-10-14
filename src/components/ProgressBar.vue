@@ -12,13 +12,12 @@
 
 <script setup lang="ts">
   import { ref } from "vue";
-  import { useSitesStore } from "../store/sites/useSitesStore";
+  import { useSitesStore } from "@/store/sites/useSitesStore";
   const store = useSitesStore()
-  
+
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/scss/vars.scss';
   .progress-bar {
     &__label {
         font-size: 12px;
