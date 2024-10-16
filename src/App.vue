@@ -21,10 +21,9 @@
   import Sidebar from './components/Sidebar.vue';
   import MainContent from './components/MainContent.vue';
   import Modal from './components/Modal.vue';
-import { useSitesStore } from './store/sites/useSitesStore';
+  import { useSitesStore } from './store/sites/useSitesStore';
 
   const store = useSitesStore()
-  
   const isModal = ref<boolean>(false)
 
   const closeModal = () => {
@@ -37,6 +36,11 @@ import { useSitesStore } from './store/sites/useSitesStore';
   onMounted(()=>{
     store.fetchData()
   })
+
+  watch(()=> store.sites ,(newSubscribe, oldSubscribe) => {
+    console.log("New Subscribes:", JSON.parse(JSON.stringify(newSubscribe)))
+    console.log("Old Subscribes:", JSON.parse(JSON.stringify(oldSubscribe)))
+  }, { deep: true })
 
 </script>
 

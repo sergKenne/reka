@@ -37,9 +37,7 @@ export const useSitesStore = defineStore('sites', () => {
     try {
       const response = await fetch('/subscribe.json');
       const data = await response.json()
-
       sites.value = Storage.getItem('sites') || data.map((item: ISite, ind: number) => ({ ...item, id: ind + 1, img: images[ind] }));
-      console.log(data)
     } catch (error) {
       console.log("error fetch...")
     }
